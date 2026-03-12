@@ -9,18 +9,18 @@ exercises.
 
 ## Sections
 
-- [Memory Safety](/memory_safety/)
+- [Memory Safety](/content/memory_safety/index.md)
 
-- [Networking](/networking/)
+- [Networking](/content/networking/)
 
-- [Operating Systems](/operating_systems/README.md)
+- [Operating Systems](/content/operating_systems/index.md)
 
-- [Linear Algebra](/linear_algebra/)
+- [Linear Algebra](/content/linear_algebra/)
 
 ## Exercises
 
-- [Spinlock](/exercises/spinlock/) — hand-rolled mutex using `AtomicBool` and
-  `UnsafeCell`
+- [Spinlock](/content/exercises/spinlock/index.md) — hand-rolled mutex using
+  `AtomicBool` and `UnsafeCell`
 
-- [Tokio Tutorial — my-redis](/exercises/tokio-tutorial/) — async TCP
-  server/client with shared state and `mpsc` channels
+- [Tokio Tutorial — my-redis](/content/exercises/tokio-tutorial/index.md) —
+  async TCP server/client with shared state and `mpsc` channels

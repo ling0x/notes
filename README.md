@@ -2,6 +2,6 @@
 
 Study notes for software engineering concepts with rust examples
 
-[View Documentation Site](https://ling0x.github.io/notes/)
+[View Documentation Site](https://blog.ling.ooo/)
 
 [![Deploy to GitHub Pages](https://github.com/ling0x/notes/actions/workflows/deploy-pages.yaml/badge.svg)](https://github.com/ling0x/notes/actions/workflows/deploy-pages.yaml)
