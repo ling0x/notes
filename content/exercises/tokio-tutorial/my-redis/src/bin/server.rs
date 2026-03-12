@@ -18,6 +18,8 @@ async fn main() {
 
     println!("Listening");
 
+    // The HashMap will be shared across many tasks and potentially many threads.
+    // To support this, it is wrapped in Arc<Mutex<_>>
     let db = Arc::new(Mutex::new(HashMap::new()));
 
     loop {
