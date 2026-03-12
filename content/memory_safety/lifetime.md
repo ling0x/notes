@@ -39,6 +39,11 @@ go stale. A &'static str also satisfies it, but a &'a str (with a non-static
 lifetime) does not.
 [rust-lang](https://doc.rust-lang.org/rust-by-example/scope/lifetime/static_lifetime.html)
 
+> It is a common misconception that 'static always means "lives forever", but
+> this is not the case. Just because a value is 'static does not mean that you
+> have a memory leak. You can read more in
+> [Common Rust Lifetime Misconceptions](https://github.com/pretzelhammer/rust-blog/blob/master/posts/common-rust-lifetime-misconceptions.md#2-if-t-static-then-t-must-be-valid-for-the-entire-program).
+
 ### Question: When `T: 'static` Is Needed?
 
 The T: 'static bound is commonly required when values must escape their creation
