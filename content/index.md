@@ -5,7 +5,7 @@ title: Ling's Notes
 Personal notes and references across software engineering topics with Rust
 exercises.
 
-[![Ling's Notes - GitHub Pages](https://github.com/ling0x/notes/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/ling0x/notes/actions/workflows/deploy-pages.yml)
+[![Deploy to GitHub Pages](https://github.com/ling0x/notes/actions/workflows/deploy-pages.yaml/badge.svg)](https://github.com/ling0x/notes/actions/workflows/deploy-pages.yaml)
 
 ## Sections
 
