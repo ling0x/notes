@@ -37,6 +37,9 @@ async fn main() {
     }
 }
 
+/// Process function handles incoming commands. It uses a HashMap to store values.
+/// SET commands will insert into the HashMap and GET values will load them.
+/// Additionally, we will use a loop to accept more than one command per connection.
 async fn process(socket: TcpStream, db: Db) {
     use mini_redis::Command::{self, Get, Set};
 
