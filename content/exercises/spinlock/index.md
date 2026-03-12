@@ -8,4 +8,4 @@ A from-scratch implementation of a spinlock in Rust using atomics and
 without relying on the OS scheduler.
 
 > [!info] Source Full source:
-> [exercises/spinlock/src/main.rs](https://github.com/ling0x/notes/blob/main/exercises/spinlock/src/main.rs)
+> [exercises/spinlock/src/main.rs](https://github.com/ling0x/notes/blob/main/content/exercises/spinlock/src/main.rs)

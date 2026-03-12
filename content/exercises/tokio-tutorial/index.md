@@ -8,4 +8,4 @@ A minimal Redis-like server and client built while following the
 sockets, shared state, and Tokio's channel primitives.
 
 > [!info] Source Full source:
-> [exercises/tokio-tutorial/my-redis](https://github.com/ling0x/notes/tree/main/exercises/tokio-tutorial/my-redis)
+> [exercises/tokio-tutorial/my-redis](https://github.com/ling0x/notes/tree/main/content/exercises/tokio-tutorial/my-redis)
