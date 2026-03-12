@@ -1,0 +1,11 @@
+---
+title: "Exercise: Spinlock"
+tags: [exercise, rust, concurrency, memory-safety]
+---
+
+A from-scratch implementation of a spinlock in Rust using atomics and
+`UnsafeCell`. The goal is to understand how a mutex works at the lowest level —
+without relying on the OS scheduler.
+
+> [!info] Source Full source:
+> [exercises/spinlock/src/main.rs](https://github.com/ling0x/notes/blob/main/exercises/spinlock/src/main.rs)
