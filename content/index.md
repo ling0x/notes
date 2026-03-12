@@ -7,7 +7,7 @@ exercises.
 
 📖 [View documentation site →](https://ling0x.github.io/notes/)
 
-[![Ling's Notes - GitHub Pages](https://github.com/ling0x/notes/actions/workflows/deploy.yml/badge.svg)](https://github.com/ling0x/notes/actions/workflows/deploy.yml)
+[![Ling's Notes - GitHub Pages](https://github.com/ling0x/notes/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/ling0x/notes/actions/workflows/deploy-pages.yml)
 
 ## Sections
 
@@ -21,6 +21,8 @@ exercises.
 
 ## Exercises
 
-- [Spinlock](/exercises/spinlock/) — hand-rolled mutex using `AtomicBool` and `UnsafeCell`
+- [Spinlock](/exercises/spinlock/) — hand-rolled mutex using `AtomicBool` and
+  `UnsafeCell`
 
-- [Tokio Tutorial — my-redis](/exercises/tokio-tutorial/) — async TCP server/client with shared state and `mpsc` channels
+- [Tokio Tutorial — my-redis](/exercises/tokio-tutorial/) — async TCP
+  server/client with shared state and `mpsc` channels
