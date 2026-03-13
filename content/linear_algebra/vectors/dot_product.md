@@ -43,9 +43,9 @@ Example in $$ \mathbb{R}^3 $$
 $$
 
 \begin{pmatrix} 1\\ 3\\ -5 \end{pmatrix} \cdot \begin{pmatrix} 4\\ -2\\ -1
-\end{pmatrix}
+\end{pmatrix} =
 
-1\cdot 4 + 3\cdot(-2) + (-5)\cdot(-1)
+1\cdot 4 + 3\cdot(-2) + (-5)\cdot(-1) =
 
 4 - 6 + 5 = 3.
 
@@ -93,15 +93,15 @@ Then:
 - Distributivity over addition:
 
   $$
-  \mathbf{a} \cdot (\mathbf{b} + \mathbf{c})
+  \mathbf{a} \cdot (\mathbf{b} + \mathbf{c}) =
   \mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c}.
   $$
 
 - Homogeneity (scalar multiplication in one slot):
 
   $$
-  (\lambda \mathbf{a}) \cdot \mathbf{b}
-   \lambda (\mathbf{a} \cdot \mathbf{b}), \quad \mathbf{a} \cdot (\lambda \mathbf{b})
+  (\lambda \mathbf{a}) \cdot \mathbf{b} =
+   \lambda (\mathbf{a} \cdot \mathbf{b}), \quad \mathbf{a} \cdot (\lambda \mathbf{b}) =
   \lambda (\mathbf{a} \cdot \mathbf{b}).
   $$
 
@@ -136,8 +136,8 @@ $$
 Then
 
 $$ \mathbf{u} \cdot \mathbf{v}
-2\cdot 3 + (-1)\cdot 4
-6 - 4
+2\cdot 3 + (-1)\cdot 4 =
+6 - 4 =
 2.
 $$
 
@@ -167,8 +167,8 @@ Then
 
 $$
 \mathbf{x} \cdot \mathbf{y} =
-2(-1) + 0(3) + (-3)(1) + 1(2)
--2 + 0 - 3 + 2
+2(-1) + 0(3) + (-3)(1) + 1(2) =
+-2 + 0 - 3 + 2 =
 -3.
 $$
 
@@ -200,13 +200,13 @@ $$
 
 $$
 
-\|\mathbf{a}\|
+\|\mathbf{a}\| =
 
-\sqrt{1^2 + 2^2}
+\sqrt{1^2 + 2^2} =
 
-\sqrt{5}, \quad \|\mathbf{b}\|
+\sqrt{5}, \quad \|\mathbf{b}\| =
 
-\sqrt{2^2 + 1^2}
+\sqrt{2^2 + 1^2} =
 
 \sqrt{5}.
 
@@ -216,11 +216,11 @@ So
 
 $$
 
-\cos\theta
+\cos\theta =
 
-\frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{a}\|\,\|\mathbf{b}\|}
+\frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{a}\|\,\|\mathbf{b}\|} =
 
-\frac{4}{\sqrt{5}\sqrt{5}}
+\frac{4}{\sqrt{5}\sqrt{5}} =
 
 \frac{4}{5},
 

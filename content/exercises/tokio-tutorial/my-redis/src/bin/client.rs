@@ -102,7 +102,7 @@ async fn main() {
 
         // Await the response
         let res = resp_rx.await;
-        println!("Got = {:?}", res);
+        println!("GOT = {:?}", res);
     });
 
     // At the bottom of the main function, we .await the join handles to ensure
