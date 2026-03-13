@@ -2,10 +2,14 @@
 title: Engineering Competency
 ---
 
+## Levels of Competence
+
 - Level 1 - Unconscious Incompetence
 - Level 2 - Conscious Incompetence
 - Level 3 - Conscious Competence
 - Level 4 - Unconscious Competence
+
+## Zone of Proximal Development
 
 - Be able to identify gaps of knowledge and expanding gradually through Zone of
   Proximal Development.
@@ -21,3 +25,7 @@ title: Engineering Competency
 
 - There is no such thing as unconscious learning, learning has to be conscious.
   Conscious Learning.
+
+## Engineering Competency Matrix
+
+[Circle CI Engineering Competency Matrix](assets/circle_ci_engineering_competency_matrix.xlsx)
