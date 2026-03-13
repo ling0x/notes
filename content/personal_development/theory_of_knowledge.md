@@ -46,7 +46,7 @@ How to Know (Descartes’ Method):
   \              \   /              /
    \              \ /              /
     \              X              /
-     \___________/   \___________/
+     \____________/ \____________/
 ```
 
 - Left circle: Truths (all true propositions).
