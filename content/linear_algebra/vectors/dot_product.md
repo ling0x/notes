@@ -166,7 +166,7 @@ $$
 Then
 
 $$
-\mathbf{x} \cdot \mathbf{y}
+\mathbf{x} \cdot \mathbf{y} =
 2(-1) + 0(3) + (-3)(1) + 1(2)
 -2 + 0 - 3 + 2
 -3.
@@ -194,7 +194,7 @@ Compute
 
 $$
 
-\mathbf{a} \cdot \mathbf{b} 1\cdot 2 + 2\cdot 1 4,
+\mathbf{a} \cdot \mathbf{b} = 1\cdot 2 + 2\cdot 1 4,
 
 $$
 
