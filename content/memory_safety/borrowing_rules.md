@@ -18,7 +18,8 @@ capacity internally. If you hold an immutable reference r1 to a String and then
 mutate it via a second mutable reference r2 — say by pushing characters — the
 String may reallocate its internal buffer to a new heap address. At that point,
 r1 would be pointing to freed memory, which is a dangling pointer and causes
-undefined behavior. Rust prevents this entirely at compile time.
+[undefined behavior](/memory_safety/segfault.md). Rust prevents this entirely at
+compile time.
 
 ```rust
 let mut s = String::from("hello");
@@ -45,7 +46,7 @@ simultaneously: ​
 - Compiler optimisation safety — the compiler can safely optimise and even
   vectorise (SIMD) code because it knows no two mutable aliases can overlap
 
-## Mutable Reference Lifetime Is Scoped
+## Mutable Reference [Lifetime](/memory_safety/lifetime.md) Is Scoped
 
 The borrow checker is smart enough to track when a reference's last use is, not
 just its scope. This means a mutable reference can be created once the immutable

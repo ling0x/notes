@@ -5,7 +5,32 @@ title: Thread
 ### Question: What exactly is a thread?
 
 A thread is the smallest unit of execution that a CPU can run — essentially, an
-independent sequence of instructions within a program.
+independent sequence of instructions within a program. The CPU distinguishes
+threads by their saved state and ID, not by “feeling” them electrically 😜.
+
+#### Every thread has a small bundle of CPU-related data called its context:
+
+- Program counter (which instruction to run next)
+
+- CPU registers (temporary values)
+
+- Stack pointer (where its stack lives)
+
+- A thread ID the OS uses to refer to it
+
+This context is stored in memory in a per-thread data structure managed by the
+OS (often called a TCB, “thread control block”).
+
+#### When the OS scheduler decides to run a different thread:
+
+- It takes the context of that thread (from memory).
+
+- It loads that context into the CPU’s registers and program counter.
+
+- From the CPU’s perspective, it is now executing that thread.
+
+So “which thread am I running?” = “which context did the OS most recently load
+into my registers and program counter?”
 
 ### Question: Why This Matters for Arc?
 
@@ -16,6 +41,51 @@ leading to use-after-free bugs or memory leaks. Arc's atomic reference counting
 prevents this without needing a lock.
 
 ### Question: What is the relationship between a thread and a process and a program?
+
+```
+             ,----------------,              ,---------,
+        ,-----------------------,          ,"        ,"|
+      ,"                      ,"|        ,"        ,"  |
+     +-----------------------+  |      ,"        ,"    |
+     |  .-----------------.  |  |     +---------+      |
+     |  |                 |  |  |     | -==----'|      |
+     |  |  I LOVE DOS!    |  |  |     |         |      |
+     |  |  Bad command or |  |  |/----|`---=    |      |
+     |  |  C:\>_          |  |  |   ,/|==== ooo |      ;
+     |  |                 |  |  |  // |(((( [33]|    ,"
+     |  `-----------------'  |," .;'| |((((     |  ,"
+     +-----------------------+  ;;  | |         |,"
+        /_)______________(_/  //'   | +---------+
+   ___________________________/___  `,
+  /  oooooooooooooooo  .o.  oooo /,   \,"-----------
+ / ==ooooooooooooooo==.o.  ooo= //   ,`\--{)B     ,"
+/_==__==========__==_ooo__ooo=_/'   /___________,"
+`-----------------------------'
+               v
++--------------------------------------------------------------+
+|                          PROGRAM                             |
+|                 (code on disk, not running)                  |
++--------------------------------------------------------------+
+        |                                     |
+        | OS loads program into memory, twice |
+        v                                     v
++----------------------+        +----------------------+
+|      PROCESS 1       |        |      PROCESS 2       |
+|  (instance of prog)  |        |  (instance of prog)  |
+|  Own address space   |        |  Own address space   |
++----------------------+        +----------------------+
+    |   |   |                           |   |   |
+    |   |   +---------------+           |   |   +---------------+
+    |   +-------+           |           |   +-------+           |
+    v           v           v           v           v           v
++--------+  +--------+  +--------+  +--------+  +--------+  +--------+
+|THREAD 1|  |THREAD 2|  |THREAD 3|  |THREAD A|  |TRHEAD B|  |THREAD C|
++--------+  +--------+  +--------+  +--------+  +--------+  +--------+
+
+- PROGRAM: one set of instructions on disk
+- PROCESS 1 and PROCESS 2: two running instances of the same program
+- THREADs: multiple execution flows inside PROCESS 1 (PROCESS 2 could also have threads)
+```
 
 The three concepts form a clear hierarchy: a program becomes a process when run,
 and a process contains one or more threads.
