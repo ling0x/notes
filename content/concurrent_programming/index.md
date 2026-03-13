@@ -2,6 +2,19 @@
 title: Concurrent Programming
 ---
 
+Concurrent programming is the practice of performing multiple tasks during
+overlapping periods of time. It’s not the same as parallelism; in concurrency,
+different sequences of operations progress independently, though not necessarily
+simultaneously. This concept is quite advanced in programming, as it often
+involves managing [threads](/content/operating_systems/thread.md), locks, and
+avoiding pitfalls like race conditions and
+[deadlocks](https://tokio.rs/tokio/tutorial/shared-state#holding-a-mutexguard-across-an-await)—making
+concurrent code challenging to implement correctly. By structuring programs as
+independent processes that cooperate in a defined manner, developers can achieve
+more flexible and efficient designs. While these designs aren’t always parallel,
+the concurrency approach provides significant benefits in scalability and
+responsiveness.
+
 ### Question: Whats the difference between async programming and concurrent programming?
 
 [Async programming](/content/async_programming/index.md) is a way to implement

@@ -3,7 +3,75 @@ title: Mutex
 ---
 
 Mutex is the most commonly used tool for sharing (mutable) data between threads.
-Mutex is short for "Mutural Exclusion".
+Mutex is short for "Mutural Exclusion". It uses UnsafeCell under the hood, and
+provides a safe interface MutexGuard for threads to access the data with
+"Interior Mutability". It is a thread-safe wrapper around some data T that
+ensures only one thread can access that data at a time
+
+```
+             +-----------------------------+
+             |       Arc<Mutex<T>>         |
+             |   (shared across threads)   |
+             |                             |
+             |   +---------------------+   |
+             |   |       Mutex<T>      |   |
+             |   |  (lock + the data)  |   |
+             |   |                     |   |
+             |   |   +-------------+   |   |
+             |   |   |   value T   |   |   |
+             |   |   +-------------+   |   |
+             |   +----------^----------+   |
+             +--------------|--------------+
+                            |
+        clones of Arc       |
+   (Arc::clone(&mutex))     |
+      sent to threads       |
+                            |
+         +------------------+------------------+
+         |                  |                  |
+         v                  v                  v
++----------------+  +----------------+  +----------------+
+|   thread 1     |  |   thread 2     |  |   thread 3     |
+|                |  |                |  |                |
+| lock()         |  | lock()         |  | lock()         |
+|   |            |  |   |            |  |   |            |
+|   v            |  |   v            |  |   v            |
+| MutexGuard<T>  |  | MutexGuard<T>  |  | MutexGuard<T>  |
+| (exclusive     |  | (exclusive     |  | (exclusive     |
+|  access)       |  |  access)       |  |  access)       |
++----------------+  +----------------+  +----------------+
+
+Only ONE MutexGuard can exist at a time:
+- When a thread calls lock(), it blocks until it gets a MutexGuard.
+- While a thread holds the guard, others wait.
+- When the guard is dropped (goes out of scope), the lock is released.
+```
+
+## Basic Example:
+
+```rust
+use std::sync::Mutex;
+
+fn main() {
+    let my_mutex = Mutex::new(5);
+
+    {
+        let mut guard = my_mutex.lock().unwrap();
+        *guard = 6;           // modify protected data
+    } // guard dropped here, mutex unlocked
+
+    println!("{:?}", my_mutex); // prints: Mutex { data: 6 }
+}
+```
+
+## Poisoning
+
+- If a thread panics while holding the lock, the mutex becomes poisoned to
+  signal that the data may be in an inconsistent state.
+
+- After that, `.lock()` returns an `Err(PoisonError)` instead of
+  `Ok(MutexGuard)`; you often handle this with `unwrap()` (propagating the
+  panic) or `unwrap_or_else` to recover.
 
 ### Question: whats the difference between Arc and Mutex?
 

@@ -1,5 +1,5 @@
 ---
-title: Ling's Notes
+title: Ling's Notebook
 ---
 
 Personal notes and references across software engineering topics with Rust
@@ -22,6 +22,10 @@ exercises.
 - [Networking](networking/)
 
 - [Operating Systems](operating_systems/)
+
+- [Personal Development](personal_development/)
+
+- [Videos](videos/)
 
 ## Exercises
 

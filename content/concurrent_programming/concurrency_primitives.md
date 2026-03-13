@@ -17,8 +17,9 @@ concurrency".
 
 ## The Core Primitives
 
-- **Threads** — the most basic primitive; independent paths of execution that
-  run concurrently, letting you exploit multi-core processors
+- [**Threads**](/operating_systems/thread.md) — the most basic primitive;
+  independent paths of execution that run concurrently, letting you exploit
+  multi-core processors
   [earthly](https://earthly.dev/blog/rust-concurrency-patterns-parallel-programming/)
 - **Channels (`mpsc`)** — typed message-passing pipes with a sender and receiver
   handle; one thread sends data, another receives it, avoiding shared memory

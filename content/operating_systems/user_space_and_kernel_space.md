@@ -1,4 +1,6 @@
-# User Space and Kernel Space
+---
+title: User Space and Kernel Space
+---
 
 User space is where your application code runs with limited privileges; kernel
 space is where the OS kernel runs with full access to hardware and all memory.
