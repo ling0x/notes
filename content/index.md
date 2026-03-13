@@ -25,6 +25,8 @@ exercises.
 
 - [Personal Development](personal_development/)
 
+- [Quantum Mechanics](quantum_mechanics/)
+
 - [Videos](videos/)
 
 ## Exercises
