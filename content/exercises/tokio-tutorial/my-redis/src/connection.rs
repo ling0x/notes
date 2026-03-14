@@ -1,10 +1,13 @@
+use std::io::Cursor;
+
 use bytes::BytesMut;
 use mini_redis::{Frame, Result};
 use tokio::{io::AsyncReadExt, net::TcpStream};
 
 pub struct Connection {
     stream: TcpStream,
-    buffer: BytesMut,
+    buffer: Vec<u8>,
+    cursor: usize,
 }
 
 impl Connection {
@@ -12,7 +15,10 @@ impl Connection {
         Connection {
             stream,
             // Allocate the buffer with 4kb of capacity.
-            buffer: BytesMut::with_capacity(4096),
+            buffer: vec![0; 4096],
+            // When working with byte arrays and read, we must also maintain
+            // a cursor tracking how much data has been bufffered
+            cursor: 0,
         }
     }
 
@@ -28,23 +34,42 @@ impl Connection {
                 return Ok(Some(frame));
             }
 
+            // Ensure the buffer has capacity
+            if self.buffer.len() == self.cursor {
+                // Grow the buffer
+                self.buffer.resize(self.cursor * 2, 0);
+            }
+
+            // Read into the buffer, tracking the number of bytes read
+            let n = self.stream.read(&mut self.buffer[self.cursor..]).await?;
+
             // There is not enough buffered data to read a frame.
             // Attempt to read more data from the socket.
             //
             // On success, the number of bytes is returned. `0`
             // indicates "end of stream".
-            if 0 == self.stream.read_buf(&mut self.buffer).await? {
+            if 0 == n {
                 // The remote closed the connection. For this to be
                 // a clean shutdown, there should be no data in the
                 // read buffer. If there is, this means that the
                 // peer closed the socket while sending a frame.
-                if self.buffer.is_empty() {
+                if self.cursor == 0 {
                     return Ok(None);
                 } else {
                     return Err("connection reset by peer".into());
                 }
+            } else {
+                // Update our cursor
+                self.cursor += n;
             }
         }
+    }
+
+    fn parse_frame(&mut self) -> Result<Option<Frame>> {
+        // Create the `T: Buf` type
+        let mut buf = Cursor::new(&self.buffer[..]);
+
+        //
     }
 
     /// Write a frame to the connection
