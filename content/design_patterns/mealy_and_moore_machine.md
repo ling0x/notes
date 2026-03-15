@@ -1,3 +1,7 @@
+---
+title: Mealy and Moore Machine
+---
+
 # Compare Mealy and Moore state machines with Rust code
 
 The key difference between Mealy and Moore
