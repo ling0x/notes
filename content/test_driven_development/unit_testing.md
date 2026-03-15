@@ -14,7 +14,9 @@ To ensure reliability and maintainability, unit tests should:
 
 - Run independently of external systems or global state.
 - Use **mocks or stubs** to replace dependencies.
-- Follow the **Arrange–Act–Assert** pattern for clarity.
+- Follow the
+  [**Arrange–Act–Assert**](/test_driven_development/arrange_act_assert.md)
+  pattern for clarity.
 - Be **deterministic** and **fast** so they can run often during development.
 
 Writing tests this way builds confidence in each unit, simplifies debugging, and
