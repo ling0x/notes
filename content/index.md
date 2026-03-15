@@ -2,8 +2,8 @@
 title: Ling's Notebook
 ---
 
-Personal notes and references across software engineering topics with Rust
-exercises.
+Personal knowledge garden with graph views and references across software
+engineering topics with Rust exercises.
 
 [![Deploy to GitHub Pages](https://github.com/ling0x/notes/actions/workflows/deploy-pages.yaml/badge.svg)](https://github.com/ling0x/notes/actions/workflows/deploy-pages.yaml)
 

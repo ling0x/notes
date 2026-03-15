@@ -1,6 +1,6 @@
 # Ling's Notes
 
-Study notes for software engineering concepts with rust examples
+Personal knowledge garden for software engineering concepts with rust examples
 
 [View Documentation Site](https://blog.ling.ooo/)
 
