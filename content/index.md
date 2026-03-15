@@ -23,7 +23,7 @@ exercises.
 
 - [Operating Systems](operating_systems/)
 
-- [Test Driven Development](content/test_driven_development/)
+- [Test Driven Development](test_driven_development/)
 
 - [Web Development](web_development/)
 
