@@ -23,6 +23,8 @@ exercises.
 
 - [Operating Systems](operating_systems/)
 
+- [System Administration](system_administration/)
+
 - [Test Driven Development](test_driven_development/)
 
 - [Web Development](web_development/)
