@@ -28,4 +28,4 @@ title: Engineering Competency
 
 ## Engineering Competency Matrix
 
-[Circle CI Engineering Competency Matrix](assets/circle_ci_engineering_competency_matrix.xlsx)
+[Circle CI Engineering Competency Matrix](/assets/circle_ci_engineering_competency_matrix.xlsx)

@@ -61,6 +61,10 @@ $$
 \mathbf{a} \times \mathbf{b} = \begin{vmatrix} \mathbf{e}_1 & \mathbf{e}_2 &
 \mathbf{e}_3\\ a_1 & a_2 & a_3\\ b_1 & b_2 & b_3 \end{vmatrix}
 
+$$
+
+$$
+
 \mathbf{e}_1(a_2 b_3 - a_3 b_2)
 
 - \mathbf{e}_2(a_1 b_3 - a_3 b_1)
@@ -71,6 +75,18 @@ $$
 
 where $\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3$ are the standard unit vectors
 in $\mathbb{R}^3$.
+
+### The "Cross-Out" Method (Fastest)
+
+The shorthand calculation for this is:
+
+1. Stack them: Write the components of the first vector over the second vector
+   twice.
+2. Cross out the first and last columns.
+3. Multiply in an 'X' pattern (top-left bot-right minus top-right bot-left) for
+   each remaining pair:
+
+<img src="/assets/cross_product_shorthand.png" alt="Cross Product Calculation" width="500">
 
 ## Rules of calculation (with examples in LaTeX)
 
