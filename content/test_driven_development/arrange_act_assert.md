@@ -131,3 +131,18 @@ Flow Diagram:
 │  └─────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────┘
 ```
+
+Rust-specific notes:
+
+- `#[cfg(test)]` gates the test module so it's only compiled during cargo test,
+  keeping production binaries lean. ​
+
+- Floating-point assertions in Rust require a tolerance check
+  (`abs() < EPSILON`) rather than a direct `==`, since `f64` arithmetic can
+  introduce tiny rounding errors. ​
+
+- Each test function is independent — no shared mutable state bleeds between
+  them, reinforcing the one behavior per test principle of AAA. ​
+
+- The **Given-When-Then** equivalent here would be: Given an empty cart, When
+  three items are added, Then the total equals their sum. ​
