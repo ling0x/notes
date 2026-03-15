@@ -1,5 +1,5 @@
 ---
-title: queuing
+title: Queuing
 ---
 
 Concurrency and queuing with tokio in rust must be explicitly introduced. Ways

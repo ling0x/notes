@@ -7,15 +7,15 @@ exercises.
 
 [![Deploy to GitHub Pages](https://github.com/ling0x/notes/actions/workflows/deploy-pages.yaml/badge.svg)](https://github.com/ling0x/notes/actions/workflows/deploy-pages.yaml)
 
-## Sections
+## Software Engineering
 
 - [Async Programming](async_programming/)
+
+- [Compiler](compiler/)
 
 - [Concurrent Programming](concurrent_programming/)
 
 - [Design Patterns](design_patterns/)
-
-- [Linear Algebra](linear_algebra/)
 
 - [Memory Safety](memory_safety/)
 
@@ -23,11 +23,17 @@ exercises.
 
 - [Operating Systems](operating_systems/)
 
-- [Personal Development](personal_development/)
+- [Test Driven Development](content/test_driven_development/)
+
+- [Web Development](web_development/)
+
+## Knowledge
+
+- [Linear Algebra](linear_algebra/)
 
 - [Quantum Mechanics](quantum_mechanics/)
 
-- [Videos](videos/)
+- [Personal Development](personal_development/)
 
 ## Exercises
 
@@ -38,3 +44,7 @@ exercises.
 - [Spinlock](exercises/spinlock/)
 
 - [Tokio Tutorial](exercises/tokio-tutorial/)
+
+## References
+
+- [Videos](videos/)
