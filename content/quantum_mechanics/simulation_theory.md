@@ -13,3 +13,7 @@ uncovering code‑like patterns embedded in the equations that describe
 fundamental particles, and he has suggested that this raises deep philosophical
 questions about whether reality might, at some level, have properties analogous
 to a computational or information‑based system.
+
+---
+
+[Simulation paper by Dr. Roman Yampolskiy](https://www.researchgate.net/publication/369187097_How_to_Escape_From_the_Simulation)
