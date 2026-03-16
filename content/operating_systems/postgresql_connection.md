@@ -21,8 +21,8 @@ Each backend process has its own private address space for session-local state,
 which avoids accidental shared mutable state between connections.
 
 Backends share only explicit shared-memory regions and files (e.g., shared
-buffer cache, WAL, locks), with well-defined synchronization, so there’s no
-“mysterious” shared state like in a multi-threaded process with global
+buffer cache, WAL, locks), with well-defined synchronization, so there's no
+"mysterious" shared state like in a multi-threaded process with global
 variables.
 
 So, you do get isolation of most state per connection, with only controlled,
