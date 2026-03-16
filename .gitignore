@@ -10,3 +10,6 @@ private/
 .replit
 replit.nix
 target/
+
+# drawio backup files
+content/whiteboards/*.bkp

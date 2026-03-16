@@ -8,7 +8,7 @@ and reuses them across many client requests.
 
 ## Key ideas:
 
-- Opening a [PostgreSQL connection](/operating_systems/postgresql_connection.md) is
+- Opening a [PostgreSQL connection](/operating_systems/postgres/postgresql_connection.md) is
   relatively expensive and each connection consumes memory; creating hundreds or
   thousands on demand is wasteful.
 
