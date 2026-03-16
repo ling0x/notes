@@ -9,7 +9,7 @@ title: Learn How To Learn
 > Most of us did not take courses on metacognition or learning theory when we
 > were growing up. We were expected to learn, but rarely taught to learn.
 
-(- Head First Design Patterns)
+(Head First Design Patterns)
 
 1. Slow down. The more you understand, the less you have to memorize. - Don’t
    just read. Stop and think.

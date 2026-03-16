@@ -2,7 +2,7 @@
 title: Synchronization Primitives
 ---
 
-[“Concurrency primitives”](/concurrent_programming/concurrency_primitives.md) is the
+[“Concurrency primitives”](/Concurrency/concurrency_primitives.md) is the
 broader term: it means basic building blocks for concurrent programming,
 including things like threads/tasks, queues, futures, and also synchronization
 mechanisms.

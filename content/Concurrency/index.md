@@ -1,5 +1,5 @@
 ---
-title: Concurrent Programming
+title: Concurrency
 ---
 
 Concurrent programming is the practice of performing multiple tasks during
@@ -15,14 +15,35 @@ more flexible and efficient designs. While these designs aren’t always paralle
 the concurrency approach provides significant benefits in scalability and
 responsiveness.
 
+### Question: Whats the difference between concurrency and parallelism?
+
+First, start to understand why we want to make a distinction between parallel
+and concurrent in the first place!
+
+> The why has everything to do with resource utilization and efficiency.
+
+> Efficiency is the (often measurable) ability to avoid wasting materials,
+> energy, effort, money, and time in doing something or in producing a desired
+> result.
+
+> Parallelism is increasing the resources we use to solve a task. It has nothing
+> to do with efficiency.
+
+> Concurrency has everything to do with efficiency and resource utilization.
+> Concurrency can never make one single task go faster. It can only help us
+> utilize our resources better and thereby finish a set of tasks faster.
+
+(Asynchronous Programming in Rust)
+
 ### Question: Whats the difference between async programming and concurrent programming?
 
-[Async programming](/content/async_programming/index.md) is a way to implement
-concurrency without relying on OS threads, while concurrent programming is the
-broader idea of making a program do multiple things at once or appear to do so.
-In the Rust async book, concurrent programming includes thread-based models, but
-async programming keeps concurrency inside the program and uses an async runtime
-plus explicit yielding with await instead of OS-managed thread scheduling.
+[Async programming](/Concurrency/async_programming/index.md) is a way to
+implement concurrency without relying on OS threads, while concurrent
+programming is the broader idea of making a program do multiple things at once
+or appear to do so. In the Rust async book, concurrent programming includes
+thread-based models, but async programming keeps concurrency inside the program
+and uses an async runtime plus explicit yielding with await instead of
+OS-managed thread scheduling.
 
 #### Core difference:
 

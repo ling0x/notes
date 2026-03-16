@@ -9,11 +9,9 @@ engineering topics with Rust exercises.
 
 ## Software Engineering
 
-- [Async Programming](async_programming/)
-
 - [Compiler](compiler/)
 
-- [Concurrent Programming](concurrent_programming/)
+- [Concurrency](Concurrency/)
 
 - [Design Patterns](design_patterns/)
 

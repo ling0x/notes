@@ -3,7 +3,7 @@ title: Channels
 ---
 
 Channels: A
-[communication primitive](/concurrent_programming/concurrency_primitives.md)
+[communication primitive](/Concurrency/concurrency_primitives.md)
 used in many languages (Rust, Go, .NET, etc.) to pass messages between
 concurrent pieces of code (goroutines, tasks, threads).
 
