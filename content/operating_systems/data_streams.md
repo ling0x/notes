@@ -8,6 +8,10 @@ title: Data Streams
 
 ## Passing Data Streams between rust binaries
 
+We can pass data directly between binaries, they don't have to go through a
+networking layers http server with ports, which adds unecessary overhead when it
+is not needed.
+
 <img src="/whiteboards/pipe_between_binaries.png" alt="Data Stream" width="100%">
 
 ## Making your own “filter” binary
