@@ -48,3 +48,7 @@ engineering topics with Rust exercises.
 - [Channels](exercises/channels/)
 
 - [My Vec](exercises/my_vec/)
+
+## Utilities
+
+- [Whiteboards](whiteboards/)
