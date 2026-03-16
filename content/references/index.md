@@ -1,5 +1,5 @@
 ---
-title: Videos
+title: References
 ---
 
-Educational content worth watching
+Educational content
