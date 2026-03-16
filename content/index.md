@@ -29,7 +29,7 @@ engineering topics with Rust exercises.
 
 - [Web Development](web_development/)
 
-## Knowledge
+## Broader Knowledge
 
 - [Linear Algebra](linear_algebra/)
 
@@ -37,16 +37,14 @@ engineering topics with Rust exercises.
 
 - [Personal Development](personal_development/)
 
-## Exercises
+- [References](references/)
 
-- [Channels](exercises/channels/)
-
-- [My Vec](exercises/my_vec/)
+## Coding Exercises
 
 - [Spinlock](exercises/spinlock/)
 
 - [Tokio Tutorial](exercises/tokio-tutorial/)
 
-## References
+- [Channels](exercises/channels/)
 
-- [Videos](videos/)
+- [My Vec](exercises/my_vec/)
