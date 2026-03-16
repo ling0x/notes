@@ -96,3 +96,15 @@ fn main() -> io::Result<()> {
 Conceptually this is equivalent to
 `producer_cmd | my_rust_filter | consumer_cmd`, but Rust is the middle filter,
 so you never rely on shell piping.
+
+# Delimiter
+
+A delimiter is a character or group of characters that marks where one piece of
+data ends and the next one begins.
+
+In computing and data formats, common delimiters include commas, tabs, spaces,
+semicolons, and pipes, such as in CSV files where commas separate values. In
+general English dictionaries, it is defined as a character that marks the
+beginning or end of a unit of data. In maths and programming, symbols like
+parentheses (), quotes " " and braces {} also act as delimiters because they
+enclose or bound expressions or code blocks.
