@@ -9,8 +9,9 @@ use of **dyn** trait.
 
 Dynamic dispatch is when the concrete type implementing a trait is resolved at
 **runtime** rather than compile time. In Rust, this is done via trait objects
-(`dyn Trait`), and the compiler implements it using a **vtable** — a table of
-function pointers generated for each concrete type.
+(`dyn Trait`), and the compiler implements it using a
+[**vtable**](/compiler/vtable.md) — a table of function pointers generated for
+each concrete type.
 
 ## [Actors](/Concurrency/async_programming/actors.md) are dynamic dispatch
 
