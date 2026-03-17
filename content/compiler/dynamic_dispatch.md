@@ -2,10 +2,10 @@
 title: Dynamic Dispatch
 ---
 
-**Dynamic dispatch_ is when you have multiple types that something might be, but
-you don't know which one until runtime. So you **dynamically** figure out which
-one of the methods to call on the type. Usually doing this requires the use of
-**dyn** trait.
+**Dynamic dispatch** is when you have multiple types that something might be,
+but you don't know which one until runtime. So you **dynamically** figure out
+which one of the methods to call on the type. Usually doing this requires the
+use of **dyn** trait.
 
 Dynamic dispatch is when the concrete type implementing a trait is resolved at
 **runtime** rather than compile time. In Rust, this is done via trait objects
