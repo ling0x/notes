@@ -11,7 +11,7 @@ engineering topics with Rust exercises.
 
 - [Compiler](compiler/)
 
-- [Concurrency](Concurrency/)
+- [Concurrency](concurrency/)
 
 - [Design Patterns](design_patterns/)
 

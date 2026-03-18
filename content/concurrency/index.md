@@ -37,7 +37,7 @@ and concurrent in the first place!
 
 ### Question: Whats the difference between async programming and concurrent programming?
 
-[Async programming](/Concurrency/async_programming/index.md) is a way to
+[Async programming](/concurrency/async_programming/index.md) is a way to
 implement concurrency without relying on OS threads, while concurrent
 programming is the broader idea of making a program do multiple things at once
 or appear to do so. In the Rust async book, concurrent programming includes

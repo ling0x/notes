@@ -13,7 +13,7 @@ Dynamic dispatch is when the concrete type implementing a trait is resolved at
 [**vtable**](/compiler/vtable.md) — a table of function pointers generated for
 each concrete type.
 
-## [Actors](/Concurrency/async_programming/actors.md) are dynamic dispatch
+## [Actors](/concurrency/async_programming/actors.md) are dynamic dispatch
 
 When you use actors, you don't need dynamic dispatch, because actors provide
 dynamic dispatch on theri own.

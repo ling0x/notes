@@ -9,3 +9,5 @@ with change.
 - Favor **Composition** over inheritance
 - Program to **Interfaces**, not implementations
 - Strive for **loosely coupled design** between objects that interact
+
+> Someone has already solved your problems.
