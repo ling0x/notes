@@ -2,10 +2,6 @@
 title: Abstraction
 ---
 
-## Abstractions provided by a computer system
-
-<img src="/whiteboards/abstraction_of_computer_system.png" alt="Abstraction" width="100%">
-
 The use of abstractions is one of the most important concepts in computer
 science. For example, one aspect of good programming practice is to formulate a
 simple application program interface (API) for a set of functions that allow
@@ -13,6 +9,10 @@ programmers to use the code without having to delve into its inner workings.
 Different programming languages provide different forms and levels of support
 for abstraction, such as Rust's trait definitions and module system with
 explicit pub visibility boundaries.
+
+## Abstractions provided by a computer system
+
+<img src="/whiteboards/abstraction_of_computer_system.png" alt="Abstraction" width="100%">
 
 We are probably familiar with several of the abstractions seen in computer
 systems. On the processor side, the instruction set architecture provides an
