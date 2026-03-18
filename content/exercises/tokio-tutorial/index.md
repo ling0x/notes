@@ -7,5 +7,5 @@ A minimal Redis-like server and client built while following the
 [Tokio tutorial](https://tokio.rs/tokio/tutorial). Covers async tasks, TCP
 sockets, shared state, and Tokio's channel primitives.
 
-> [!info] Source Full source:
+> [!info] Source Code:
 > [exercises/tokio-tutorial/my-redis](https://github.com/ling0x/notes/tree/main/content/exercises/tokio-tutorial/my-redis)
