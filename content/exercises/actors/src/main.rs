@@ -108,6 +108,25 @@ impl MyActorHandle {
     }
 }
 
+/// When you call MyActorHandle::new(), it already calls tokio::spawn(run_my_actor(actor))
+/// internally. So by the time new() returns, the actor task is live and waiting
+/// for messages on its mpsc::Receiver.
+///
+/// You never call tokio::spawn in main — it's encapsulated inside MyActorHandle::new(),
+/// which is the idiomatic placement for this pattern. This keeps the spawning
+/// logic close to the actor itself.
+///
+/// Graceful shutdown is automatic — when actor_handle (and all its clones) are
+/// dropped, the mpsc::Sender is dropped, causing actor.receiver.recv().await to
+/// return None, breaking the while let loop and ending the task.
+///
+/// Cloning the handle is safe — MyActorHandle derives Clone, so multiple parts
+/// of your program can send messages to the same actor concurrently without any
+/// extra synchronization, since the actor processes them one at a time.
+///
+/// Backpressure is built in — the channel is bounded (mpsc::channel(8)), so if
+/// the actor can't keep up, senders will .await until there's room, naturally
+/// throttling the workload.
 #[tokio::main]
 async fn main() {
     // 1. Creating the handle also spawns the actor task automatically (inside MyActorHandle::new)
