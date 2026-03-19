@@ -85,10 +85,10 @@ title: Egoless Programming
 
 10. **Critique code instead of people – be kind to the coder, not to the code.**
 
-When reviewing code, focus on improving it, not judging the person behind it.
-Tone matters: say “This function could be clearer if…” rather than “You didn’t
-write this well.” Constructive feedback builds confidence and shared
-understanding.
+    When reviewing code, focus on improving it, not judging the person behind
+    it. Tone matters: say “This function could be clearer if…” rather than “You
+    didn’t write this well.” Constructive feedback builds confidence and shared
+    understanding.
 
 ([The Psychology of Computer Programming](https://archive.org/details/psychologyofcomp00unse)
 by Gerald M. Weinberg, describes principles for healthy, collaborative software
